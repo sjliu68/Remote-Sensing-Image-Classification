@@ -20,7 +20,9 @@ Finally, the object-based post-classification refinement strategy is utilized to
 You will see two predicted maps under the current directory when finished.
 One is raw classification, and the other is after object-based post-classification refinement (superpixel-based regularization).
 
-### Reference
+### References
   [1] Liu, S., Qi, Z., Li, X. and Yeh, A.G.O., 2019. Integration of Convolutional Neural Networks and Object-Based Post-Classification
 Refinement for Land Use and Land Cover Mapping with Optical and SAR Data. Remote Sens., 11(6), p.690. 
+  [2] Liu, S., Luo, H., Tu, Y., He, Z. and Li, J., 2018, July. Wide Contextual Residual Network with Active Learning for Remote
+Sensing Image Classification. In IGARSS 2018, pp. 7145-7148.
 
