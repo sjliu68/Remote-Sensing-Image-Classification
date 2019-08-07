@@ -45,11 +45,10 @@ def DCCNN(band, imx, ncla1):
                    kernel_initializer=RandomNormal(mean=0.0, stddev=0.01))
     conv33 = Conv2D(128,kernel_size=(1,1),padding='same',
                    kernel_initializer=RandomNormal(mean=0.0, stddev=0.01))
-#    
     fc1 = Dense(ncla1,activation='softmax',name='output1',
                 kernel_initializer=RandomNormal(mean=0.0, stddev=0.01))
 
-    # x1
+    # begin
     x1 = conv01(input1)
     x2 = conv02(input1)
     x3 = conv03(input1)
