@@ -34,7 +34,7 @@ This implementation is based on Keras with TensorFlow backend using the Double-B
 
 For this demo, the dafault network is DBMA. By changing the parameter - patch, which controls the window size of each sample, other networks will be applied.
 
-### Patch and the corresponding network
+#### Patch and the corresponding network
 - patch==5: WCRN
 - patch==7: DBMA
 - patch==9: ResNet99_avg
