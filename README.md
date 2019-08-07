@@ -28,7 +28,7 @@ Finally, the object-based post-classification refinement strategy is utilized to
 ### Data sets
 You can download the hyperspectral data sets in matlab format at: http://www.ehu.eus/ccwintco/index.php/Hyperspectral_Remote_Sensing_Scenes
 
-Then, you can change the data sets to numpy.array
+Then, you can convert the data sets to numpy.array
 
 ## How to use
 ### Run main.py
