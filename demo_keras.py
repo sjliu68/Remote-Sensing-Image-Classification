@@ -1,9 +1,12 @@
 # -*- coding: utf-8 -*-
 """
 Created on Sat Jul  6 01:36:12 2019
+Last updated on Aug 7 2019
 
-@author: SJ
+@author: Shengjie Liu
+@Email: liushengjie0756@gmail.com
 """
+
 import numpy as np
 from scipy import stats
 import rscls
@@ -92,6 +95,7 @@ if True:
             x1_train = x1_train.reshape(x1_train.shape[0],patch,patch,im1z,-1)
         elif patch == 5:
             model1 = nw.wcrn(im1z,cls1) # WCRN
+            # model1 = nw.DCCNN(im1z,patch,cls1) # DCCNN
         elif patch == 9:
             model1 = nw.resnet99_avg(im1z,patch,cls1,l=1)
         else:
