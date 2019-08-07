@@ -2,7 +2,8 @@
 """
 Created on Tue Aug 6 03:32:28 2019
 
-@author: sj
+@author: Shengjie Liu
+@Email: liuishengjie0756@gmail.com
 """
 
 import numpy as np
