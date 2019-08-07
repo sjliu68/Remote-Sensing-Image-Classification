@@ -15,6 +15,7 @@ Finally, the object-based post-classification refinement strategy is utilized to
     [3] Double Branch Multi Attention Mechanism Network - DBMA
     Residual Network with Average Pooling - ResNet99_avg
     [4] Residual Network - ResNet99
+    [5] Deep Contextual CNN - DCCNN
 
 ### Requirements
     pytorch==1.1.0 # for PyTorch implementation
@@ -47,11 +48,11 @@ For this demo, the dafault network is DBMA. By changing the parameter - patch, w
 - patch==9: ResNet99_avg
 
 ## Networks' performance
-Network | WCRN | DBMA | ResNet99 | ResNet99_avg
-:-: | :-: | :-: | :-: | :-:
-train time (s) | 18 | 222 | 21 | 20| 
-test time (s) | 12| 199 | 22 | 21|
-OA (%) | 83.00 | 86.86 | 72.34 | 86.68 |
+Network | WCRN | DBMA | ResNet99 | ResNet99_avg | DCCNN
+:-: | :-: | :-: | :-: | :-: | :-:
+train time (s) | 18 | 222 | 21 | 20 | 41 | 
+test time (s) | 12| 199 | 22 | 21 | 18 |
+OA (%) | 83.00 | 86.86 | 72.34 | 86.68 | 77.54 |
 
 The experiments are based on Keras with TensorFlow backend using 10 samples per class with augmentation, conducted on a machine equipped with Intel i5-8400, GTX1050Ti 4G and 8G RAM. 
 
@@ -72,4 +73,5 @@ Sensing Image Classification. In IGARSS 2018, pp. 7145-7148.](https://doi.org/10
   [3] [Ma, W.; Yang, Q.; Wu, Y.; Zhao, W.; Zhang, X. Double-Branch Multi-Attention Mechanism Network for Hyperspectral Image Classification. Remote Sens. 2019, 11, 1307.](https://doi.org/10.3390/rs11111307)
   
   [4] [Liu, S., and Shi, Q., 2019. Multitask Deep Learning with Spectral Knowledge for Hyperspectral Image Classification. arXiv preprint arXiv:1905.04535.](https://arxiv.org/abs/1905.04535)
-
+ 
+  [5] [Lee H. Lee and H. Kwon, "Going Deeper With Contextual CNN for Hyperspectral Image Classification," in IEEE Transactions on Image Processing, vol. 26, no. 10, pp. 4843-4855, Oct. 2017.](https://doi.org/10.1109/TIP.2017.2725580)
