@@ -57,6 +57,11 @@ The experiments are based on Keras with TensorFlow backend using 10 samples per 
 
 The OA is of raw classification averaged from 10 Monte Carlo runs.
 
+## To do
+- Add PyTorch implementation of DBMA and ResNet99_avg
+- Active learning
+- Multitask deep learning
+
 ## References
   [1] [Liu, S., Qi, Z., Li, X. and Yeh, A.G.O., 2019. Integration of Convolutional Neural Networks and Object-Based Post-Classification
 Refinement for Land Use and Land Cover Mapping with Optical and SAR Data. Remote Sens., 11(6), p.690.](https://doi.org/10.3390/rs11060690)
