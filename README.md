@@ -46,6 +46,17 @@ For this demo, the dafault network is DBMA. By changing the parameter - patch, w
 - patch==7: DBMA
 - patch==9: ResNet99_avg
 
+## Networks' performance
+Network | WCRN | DBMA | ResNet99 | ResNet99_avg
+:-: | :-: | :-: | :-: | :-:
+train time (s) | 18 | 222 | 21 | 20| 
+test time (s) | 12| 199 | 22 | 21|
+OA (%) | 83.00 | 86.86 | 72.34 | 86.68 |
+
+The experiments are based on Keras with TensorFlow backend using 10 samples per class with augmentation, conducted on a machine equipped with Intel i5-8400, GTX1050Ti 4G and 8G RAM. 
+
+The OA is of raw classification averaged from 10 Monte Carlo runs.
+
 ## References
   [1] Liu, S., Qi, Z., Li, X. and Yeh, A.G.O., 2019. Integration of Convolutional Neural Networks and Object-Based Post-Classification
 Refinement for Land Use and Land Cover Mapping with Optical and SAR Data. Remote Sens., 11(6), p.690. 
