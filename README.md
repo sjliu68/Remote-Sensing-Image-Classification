@@ -11,11 +11,11 @@ Then, we generate training samples and train a network. The network is used to p
 Finally, the object-based post-classification refinement strategy is utilized to refine the classification maps.
 
 ### Networks
-    [2] Wide Contextual Residual Network - WCRN
-    [3] Double Branch Multi Attention Mechanism Network - DBMA
-    Residual Network with Average Pooling - ResNet99_avg
-    [4] Residual Network - ResNet99
-    [5] Deep Contextual CNN - DCCNN
+- Wide Contextual Residual Network - WCRN [2]
+- Double Branch Multi Attention Mechanism Network - DBMA [3]
+- Residual Network with Average Pooling - ResNet99_avg
+- Residual Network - ResNet99 [4]
+- Deep Contextual CNN - DCCNN [5]
 
 ### Requirements
     pytorch==1.1.0 # for PyTorch implementation
