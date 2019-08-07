@@ -21,6 +21,11 @@ Finally, the object-based post-classification refinement strategy is utilized to
     sklearn==0.19.1
     keras==2.1.6 # for Keras implementation
     tensorflow==1.9.0 # for Keras implementation
+    
+### Data sets
+You can download the hyperspectral data sets in matlab format at: http://www.ehu.eus/ccwintco/index.php/Hyperspectral_Remote_Sensing_Scenes
+
+Then, you can change the data sets to numpy.array
 
 ## How to use
 ### Run main.py
