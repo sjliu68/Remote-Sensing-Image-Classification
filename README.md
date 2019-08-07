@@ -59,12 +59,12 @@ The OA is of raw classification averaged from 10 Monte Carlo runs.
 
 ## References
   [1] Liu, S., Qi, Z., Li, X. and Yeh, A.G.O., 2019. Integration of Convolutional Neural Networks and Object-Based Post-Classification
-Refinement for Land Use and Land Cover Mapping with Optical and SAR Data. Remote Sens., 11(6), p.690. 
+Refinement for Land Use and Land Cover Mapping with Optical and SAR Data. Remote Sens., 11(6), p.690. doi.org/10.3390/rs11060690
 
   [2] Liu, S., Luo, H., Tu, Y., He, Z. and Li, J., 2018, July. Wide Contextual Residual Network with Active Learning for Remote
-Sensing Image Classification. In IGARSS 2018, pp. 7145-7148.
+Sensing Image Classification. In IGARSS 2018, pp. 7145-7148. doi.org/10.1109/IGARSS.2018.8517855
 
-  [3] Ma, W.; Yang, Q.; Wu, Y.; Zhao, W.; Zhang, X. Double-Branch Multi-Attention Mechanism Network for Hyperspectral Image Classification. Remote Sens. 2019, 11, 1307.
+  [3] Ma, W.; Yang, Q.; Wu, Y.; Zhao, W.; Zhang, X. Double-Branch Multi-Attention Mechanism Network for Hyperspectral Image Classification. Remote Sens. 2019, 11, 1307. doi.org/10.3390/rs11111307
   
-  [4] Liu, S., and Shi, Q., 2019. Multitask Deep Learning with Spectral Knowledge for Hyperspectral Image Classification. arXiv preprint arXiv:1905.04535v3. 
+  [4] Liu, S., and Shi, Q., 2019. Multitask Deep Learning with Spectral Knowledge for Hyperspectral Image Classification. arXiv preprint arXiv:1905.04535. arxiv.org/abs/1905.04535
 
