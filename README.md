@@ -37,7 +37,7 @@ One is raw classification, and the other is after object-based post-classificati
 This implementation is based on PyTorch using the Wide Contextual Residual Network [2].
 
 ### Run demo_keras.py
-This implementation is based on Keras with TensorFlow backend using the Double-Branch Multi-Attention Mechanism Network [3].
+This implementation is based on Keras with TensorFlow backend.
 
 For this demo, the dafault network is DBMA. By changing the parameter - patch, which controls the window size of each sample, other networks will be applied.
 
