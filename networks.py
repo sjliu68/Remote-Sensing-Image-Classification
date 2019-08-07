@@ -9,7 +9,86 @@ from keras import regularizers
 from keras import initializers
 from keras.initializers import he_normal, RandomNormal
 from keras.layers import multiply, GlobalAveragePooling2D, GlobalAveragePooling3D
-from keras.layers.core import Reshape
+from keras.layers.core import Reshape, Dropout
+
+def DCCNN(band, imx, ncla1):
+    input1 = Input(shape=(imx,imx,band))
+
+    # define network
+    conv01 = Conv2D(128,kernel_size=(1,1),padding='valid',
+                   kernel_initializer=RandomNormal(mean=0.0, stddev=0.01))
+    conv02 = Conv2D(128,kernel_size=(3,3),padding='valid',
+                   kernel_initializer=RandomNormal(mean=0.0, stddev=0.01))
+    conv03 = Conv2D(128,kernel_size=(5,5),padding='valid',
+                   kernel_initializer=RandomNormal(mean=0.0, stddev=0.01))
+    bn1 = BatchNormalization(axis=-1,momentum=0.9,epsilon=0.001,center=True,scale=True,
+                             beta_initializer='zeros',gamma_initializer='ones',
+                             moving_mean_initializer='zeros',
+                             moving_variance_initializer='ones')
+    bn2 = BatchNormalization(axis=-1,momentum=0.9,epsilon=0.001,center=True,scale=True,
+                             beta_initializer='zeros',gamma_initializer='ones',
+                             moving_mean_initializer='zeros',
+                             moving_variance_initializer='ones')
+    conv0 = Conv2D(128,kernel_size=(1,1),padding='same',
+                   kernel_initializer=RandomNormal(mean=0.0, stddev=0.01))
+    conv11 = Conv2D(128,kernel_size=(1,1),padding='same',
+                   kernel_initializer=RandomNormal(mean=0.0, stddev=0.01))
+    conv12 = Conv2D(128,kernel_size=(1,1),padding='same',
+                   kernel_initializer=RandomNormal(mean=0.0, stddev=0.01))
+    conv21 = Conv2D(128,kernel_size=(1,1),padding='same',
+                   kernel_initializer=RandomNormal(mean=0.0, stddev=0.01))
+    conv22 = Conv2D(128,kernel_size=(1,1),padding='same',
+                   kernel_initializer=RandomNormal(mean=0.0, stddev=0.01))
+    conv31 = Conv2D(128,kernel_size=(1,1),padding='same',
+                   kernel_initializer=RandomNormal(mean=0.0, stddev=0.01))
+    conv32 = Conv2D(128,kernel_size=(1,1),padding='same',
+                   kernel_initializer=RandomNormal(mean=0.0, stddev=0.01))
+    conv33 = Conv2D(128,kernel_size=(1,1),padding='same',
+                   kernel_initializer=RandomNormal(mean=0.0, stddev=0.01))
+#    
+    fc1 = Dense(ncla1,activation='softmax',name='output1',
+                kernel_initializer=RandomNormal(mean=0.0, stddev=0.01))
+
+    # x1
+    x1 = conv01(input1)
+    x2 = conv02(input1)
+    x3 = conv03(input1)
+    x1 = MaxPooling2D(pool_size=(5,5))(x1)
+    x2 = MaxPooling2D(pool_size=(3,3))(x2)
+    x1 = concatenate([x1,x2,x3],axis=-1)
+    
+    x1 = Activation('relu')(x1)
+    x1 = bn1(x1)
+    x1 = conv0(x1)
+    
+    x11 = Activation('relu')(x1)
+    x11 = bn2(x11)
+    x11 = conv11(x11)
+    x11 = Activation('relu')(x11)
+    x11 = conv12(x11)
+    x1 = Add()([x1,x11])
+    
+    x11 = Activation('relu')(x1)
+    x11 = conv21(x11)
+    x11 = Activation('relu')(x11)
+    x11 = conv22(x11)
+    x1 = Add()([x1,x11])
+    
+    x1 = Activation('relu')(x1)
+    x1 = conv31(x1)
+    x1 = Activation('relu')(x1)
+    x1 = Dropout(0.5)(x1)
+    x1 = conv32(x1)
+    x1 = Activation('relu')(x1)
+    x1 = Dropout(0.5)(x1)
+    x1 = conv33(x1)
+    
+    x1 = Flatten()(x1)
+    pre1 = fc1(x1)
+
+    model1 = Model(inputs=input1, outputs=pre1)
+    return model1
+    
 
 def DBMA(band, ncla1):
     input1 = Input(shape=(7,7,band,1))
@@ -332,12 +411,12 @@ def resnet99(band, ncla1):
     x11 = conv12(x11)
     x1 = Add()([x1,x11])
     
-    x11 = bn21(x1)
-    x11 = Activation('relu')(x11)
-    x11 = conv21(x11)
-    x11 = Activation('relu')(x11)
-    x11 = conv22(x11)
-    x1 = Add()([x1,x11])
+#    x11 = bn21(x1)
+#    x11 = Activation('relu')(x11)
+#    x11 = conv21(x11)
+#    x11 = Activation('relu')(x11)
+#    x11 = conv22(x11)
+#    x1 = Add()([x1,x11])
     
     x1 = Flatten()(x1)
     pre1 = fc1(x1)
