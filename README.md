@@ -3,7 +3,7 @@ This project focuses on remote sensing image classification using deep learning.
 
 The current implementations are based on PyTorch and Keras with TensorFlow backend. 
 
-Feel free to contact me: liushengjie0756 (at) gmail.com
+Feel free to contact me: liushengjie0756 [AT] gmail.com
 
 ## Overview
 In the script, we first conduct image segmentation and divide the image to several objects.
