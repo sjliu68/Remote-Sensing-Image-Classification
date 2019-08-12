@@ -49,7 +49,7 @@ Some imagery may be too large to load in memory at once. For this scenario, we s
 - Then, run   <*demo_keras_train.py*>   to train the model, and the model will be saved under current dir.
 - Finally, run   <*demo_keras_predict.py*>   to predict the whole image.
 
-#### Patch and the corresponding network
+## Patch and the corresponding network
 - patch==5: WCRN
 - patch==7: DBMA
 - patch==9: ResNet99_avg
