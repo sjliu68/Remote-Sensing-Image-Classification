@@ -43,9 +43,9 @@ This implementation is based on Keras with TensorFlow backend.
 For this demo, the dafault network is DBMA. By changing the parameter - patch, which controls the window size of each sample, other networks will be applied.
 
 ### Separate training and testing
-Some imagery may be too large to load in memory at once. For this scenario, we separate the training and test part so that all the training samples can be used for training. To do so, 
+Some imagery may be too large to be loaded in memory at once. For this scenario, we use subsets of the imagery, and separate the training and testing parts so that all the samples can be used for training. To do so, you need to decide how to clip the imagery and fill in the arguments in <*demo_keras_loadsamples.py*>. The workflow of separate training and testing goes as follows.
 
-- first, run   <*demo_keras_loadsamples.py*>   to generate training samples and save them under current dir.
+- First, run   <*demo_keras_loadsamples.py*>   to generate training samples and save them under current dir.
 - Then, run   <*demo_keras_train.py*>   to train the model, and the model will be saved under current dir.
 - Finally, run   <*demo_keras_predict.py*>   to predict the whole image.
 
