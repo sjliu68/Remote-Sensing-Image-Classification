@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 """
+
 Last updated on Aug 12 2019
 @author: Shengjie Liu
 @Email: liushengjie0756@gmail.com
 
-This script loads a model and then predict on the whole image.
+This script separately load images and predict them.
 """
 
 import numpy as np
@@ -32,19 +33,34 @@ gt1_file = 'yubei2.tif'
 # load model created by demo_keras_predict.py
 model_file = 'model99079.h5'
 
+## number of training samples per class
+parser = argparse.ArgumentParser(description='manual to this script')
+parser.add_argument('--nos', type=int, default = 5)
+args = parser.parse_args()
+num_per_cls1 = args.nos
+
 ## network configuration
 patch = 5  # If patch==5, WCRN. If patch==7, BDMA. If patch==9, ResNet-avg.
-vbs = 1  # if vbs==0, training in silent mode
+vbs = 0  # if vbs==0, training in silent mode
 bsz1 = 20  # batch size
 ensemble = 1  # if ensemble>1, snapshot ensemble activated 
+# if loss not decrease for 5 epoches, stop training
+early_stopping = EarlyStopping(monitor='loss', patience=5, verbose=2)
+
 
 # for Monte Carlo runs  
 seedx = [0,1,2,3,4,5,6,7,8,9]
 seedi = 0  # default seed = 0
 
 saved = {}  # save confusion matrix for raw classification
+saved_p = {}  # save confusion matrix after object-based refinement
 
-bgx,bgy,imx,imy = 1000,1000,5000,5000
+# 6509,8210
+
+# bgx,bgy,imx,imy
+subsets = [(0,0,6509,4105),
+           (0,4105,6509,4105)]
+
 
 def setGeo(geotransform,bgx,bgy):
     reset0 = geotransform[0] + bgx*geotransform[1]
@@ -53,26 +69,28 @@ def setGeo(geotransform,bgx,bgy):
              reset3,geotransform[4],geotransform[5])
     return reset
 
+
 if True:
-    for seedi in range(0,1):
+    for subset in subsets:
         time1 = int(time.time())
         K.clear_session()  # clear session before next loop 
-        print('seed'+str(seedi)+','+str(seedx[seedi]))
+        print(subset)
             
-        gt = gdal.Open(gt1_file,gdal.GA_ReadOnly) # dataset
+        gt = gdal.Open(gt1_file,gdal.GA_ReadOnly)
         im = gdal.Open(im1_file,gdal.GA_ReadOnly)
         projection = gt.GetProjection()
         geotransform = gt.GetGeoTransform()
-        newgeo = setGeo(geotransform,bgx,bgy)
-        gt = gt.ReadAsArray(bgx,bgy,imx,imy)
-        im = im.ReadAsArray(bgx,bgy,imx,imy)
+        newgeo = setGeo(geotransform,subset[0],subset[1])
+        gt = gt.ReadAsArray(subset[0],subset[1],subset[2],subset[3])
+        im = im.ReadAsArray(subset[0],subset[1],subset[2],subset[3])
         im = im.transpose(1,2,0)
         cls1 = gt.max()
 
         im1x,im1y,im1z = im.shape
         im = np.float32(im)
         
-        # kind of normalization, the max DN of the original image is 8000
+        # kind of normalization, the max DN of the original image is 10000
+        # the goal is to make the DNs range from (-2,2)
         im = im/5000.0
         
         # initilize controller 
@@ -108,7 +126,7 @@ if True:
         pre1 = np.int8(stats.mode(pre_all_1,axis=0)[0]).reshape(im1x,im1y)
         result11 = rscls.gtcfm(pre1+1,c1.gt+1,cls1)
         saved[str(seedi)+'a'] = result11
-        rscls.save_cmap(pre1, 'jet', 'pre.png')
+        rscls.save_cmap(pre1, 'jet', 'pre'+str(time4)[-5:]+'.png')
         
         # save as geocode-tif
         name = 'predict_'+str(time4)[-5:]
@@ -118,3 +136,4 @@ if True:
         outdata.GetRasterBand(1).WriteArray(pre1+1)
         outdata.FlushCache() ##saves to disk!!
         outdata = None
+        
