@@ -31,7 +31,7 @@ You can download the hyperspectral data sets in matlab format at: http://www.ehu
 Then, you can convert the data sets to numpy.array
 
 ## How to use
-### Run main.py
+### Run demo_pytorch.py
 You will see two predicted maps under the current directory when finished.
 One is raw classification, and the other is after object-based post-classification refinement (superpixel-based regularization).
 
