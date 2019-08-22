@@ -68,10 +68,11 @@ if True:
             
         gt = gdal.Open(gt1_file,gdal.GA_ReadOnly)
         im = gdal.Open(im1_file,gdal.GA_ReadOnly)
-        projection = gt.GetProjection()
-        geotransform = gt.GetGeoTransform()
+        projection = im.GetProjection()
+        geotransform = im.GetGeoTransform()
         newgeo = setGeo(geotransform,bgx,bgy)
         gt = gt.ReadAsArray(bgx,bgy,imx,imy)
+        gt[np.where(gt==255)] = 0
         im = im.ReadAsArray(bgx,bgy,imx,imy)
         im = im.transpose(1,2,0)
         cls1 = gt.max()
