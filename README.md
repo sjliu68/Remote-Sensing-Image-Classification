@@ -61,7 +61,7 @@ train time (s) | 18 | 222 | 21 | 20 | 41 |
 test time (s) | 12| 199 | 22 | 21 | 18 |
 OA (%) | 83.00 | 86.86 | 72.34 | 86.68 | 77.54 |
 
-The experiments are based on Keras with TensorFlow backend using 10 samples per class with augmentation, conducted on a machine equipped with Intel i5-8400, GTX1050Ti 4G and 8G RAM. The OA is of raw classification averaged from 10 Monte Carlo runs.
+The experiments are based on Keras with TensorFlow backend using **10 samples per class with augmentation**, conducted on a machine equipped with Intel i5-8400, GTX1050Ti 4G and 8G RAM. The OA is of raw classification averaged from 10 Monte Carlo runs.
 
 Network | WCRN | DBMA | ResNet99 | ResNet99_avg | DCCNN
 :-: | :-: | :-: | :-: | :-: | :-:
@@ -69,7 +69,7 @@ train time (s) | 9 | - | - | - | - |
 test time (s) | 13| - | - | - | - |
 OA (%) | 72.77 | - | - | - | - |
 
-The experiments are based on Keras with TensorFlow backend using 5 samples per class with augmentation, conducted on a machine equipped with Intel i5-8500, GTX1060 5G and 32G RAM. The OA is of raw classification averaged from 10 Monte Carlo runs.
+The experiments are based on Keras with TensorFlow backend using **5 samples per class with augmentation**, conducted on a machine equipped with Intel i5-8500, GTX1060 5G and 32G RAM. The OA is of raw classification averaged from 10 Monte Carlo runs.
 
 ## To do
 - Add PyTorch implementation of DBMA and ResNet99_avg
