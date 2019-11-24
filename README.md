@@ -75,9 +75,9 @@ The experiments are based on Keras with TensorFlow backend using **5 samples per
 
 Network | WCRN | DBMA | ResNet99 | ResNet99_avg | DCCNN
 :-: | :-: | :-: | :-: | :-: | :-:
-train time (s) | 91 | 755 | 98 | 88 | - | 
-test time (s) | 14 | 132 | 22 | 20 | - |
-OA (%) | 77.91 | 81.14 | 78.22 | 79.56 | - |
+train time (s) | 91 | 755 | 98 | 88 | 132 | 
+test time (s) | 14 | 132 | 22 | 20 | 17 |
+OA (%) | 77.91 | 81.14 | 78.22 | 79.56 | 77.05 |
 
 The experiments are based on Keras with TensorFlow backend using **5 samples per class with augmentation and pseudo samples**, conducted on a machine equipped with Intel i5-8500, GTX1060 5G and 32G RAM. The OA is of raw classification averaged from 10 Monte Carlo runs.
 
