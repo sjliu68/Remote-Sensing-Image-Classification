@@ -91,7 +91,7 @@ Salinas Valley | - | - | - | - | - |
 KSC | - | - | - | - | - |
 University of Houston | - | - | - | - | - |
 Flevoland | 77.25 (1.84) | - | - | - | - |
-Foulum | 95.87 (1.06) | - | - | - | - |
+Foulum | 95.87 (1.06) | 97.99 (1.20) | - | - | - |
 
 The experiments are based on Keras with TensorFlow backend using **10 samples per class**, conducted on a machine equipped with Intel i5-8500, GTX1060 5G and 32G RAM. The OA is of raw classification averaged from 10 Monte Carlo runs.
 
