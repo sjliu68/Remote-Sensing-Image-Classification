@@ -81,6 +81,18 @@ OA (%) | 77.91 | 81.14 | 78.22 | 79.56 | 77.05 |
 
 The experiments are based on Keras with TensorFlow backend using **5 samples per class with augmentation and pseudo samples**, conducted on a machine equipped with Intel i5-8500, GTX1060 5G and 32G RAM. The OA is of raw classification averaged from 10 Monte Carlo runs.
 
+## Data sets baseline
+Data | WCRN | DBMA | ResNet99 | ResNet99_avg | DCCNN
+:-: | :-: | :-: | :-: | :-: | :-:
+Pavia University | - | - | - | - | - | 
+Pavia Center | - | - | - | - | - |
+Indian Pine | - | - | - | - | - |
+Salinas Valley | - | - | - | - | - |
+KSC | - | - | - | - | - |
+University of Houston | - | - | - | - | - |
+Flevoland | 77.25 (1.84) | - | - | - | - |
+Foulum | - | - | - | - | - |
+
 ## To do
 - Add PyTorch implementation of DBMA and ResNet99_avg
 - Active learning
