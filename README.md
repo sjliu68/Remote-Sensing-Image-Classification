@@ -86,7 +86,7 @@ Data | WCRN | DBMA | ResNet99 | ResNet99_avg | DCCNN
 :-: | :-: | :-: | :-: | :-: | :-:
 Pavia University | - | - | - | - | - | 
 Pavia Center | - | - | - | - | - |
-Indian Pine | - | - | - | - | - |
+Indian Pine | - | - | - | 80.21 (2.49) | - |
 Salinas Valley | - | - | - | - | - |
 KSC | - | - | - | 95.08 (0.96) | - |
 University of Houston | - | - | - | - | - |
