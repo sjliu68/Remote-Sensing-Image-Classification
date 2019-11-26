@@ -88,7 +88,7 @@ Pavia University | - | - | - | - | - |
 Pavia Center | - | - | - | - | - |
 Indian Pine | - | - | - | - | - |
 Salinas Valley | - | - | - | - | - |
-KSC | - | - | - | - | - |
+KSC | - | - | - | 95.08 (0.96) | - |
 University of Houston | - | - | - | - | - |
 Flevoland | 77.25 (1.84) | 77.29 (2.55) | - | 81.66 (1.01) | - |
 Foulum | 95.87 (1.06) | 97.99 (1.20) | - | 98.26 (1.11) | - |
