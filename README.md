@@ -55,6 +55,7 @@ Some imagery may be too large to be loaded in memory at once. For this scenario,
 - patch==9: ResNet99_avg
 
 ## Networks' performance
+### Keras
 Network | WCRN | DBMA | ResNet99 | ResNet99_avg | DCCNN
 :-: | :-: | :-: | :-: | :-: | :-:
 train time (s) | 18 | 222 | 21 | 20 | 41 | 
@@ -62,16 +63,6 @@ test time (s) | 12| 199 | 22 | 21 | 18 |
 OA (%) | 83.00 | 86.86 | 72.34 | 86.68 | 77.54 |
 
 The experiments are based on Keras with TensorFlow backend using **10 samples per class with augmentation**, conducted on a machine equipped with Intel i5-8400, GTX1050Ti 4G and 8G RAM. The OA is of raw classification averaged from 10 Monte Carlo runs.
-
-#### Pytorch
-Network | WCRN | DBMA | ResNet99 | ResNet99_avg | DCCNN
-:-: | :-: | :-: | :-: | :-: | :-:
-train time (s) |  |  |  |  | | 
-test time (s) | |  |  |  |  |
-OA (%) | 79.88 |  |  |  |  |
-
-The experiments are based on **Pytorch** backend using **10 samples per class with augmentation**, conducted on a machine equipped with Intel i7-8700 and 32G RAM (no cuda). The OA is of raw classification averaged from 10 Monte Carlo runs.
-
 
 Network | WCRN | DBMA | ResNet99 | ResNet99_avg | DCCNN
 :-: | :-: | :-: | :-: | :-: | :-:
@@ -90,7 +81,7 @@ OA (%) | 77.91 | 81.14 | 78.22 | 79.56 | 77.05 |
 
 The experiments are based on Keras with TensorFlow backend using **5 samples per class with augmentation and pseudo samples**, conducted on a machine equipped with Intel i5-8500, GTX1060 5G and 32G RAM. The OA is of raw classification averaged from 10 Monte Carlo runs.
 
-## Baseline for data sets
+##### Baseline for data sets
 Data | WCRN | DBMA | ResNet99 | ResNet99_avg | DCCNN
 :-: | :-: | :-: | :-: | :-: | :-:
 Pavia University | - | - | - | - | - | 
@@ -103,6 +94,17 @@ Flevoland | 77.25 (1.84) | 77.29 (2.55) | - | 81.66 (1.01) | - |
 Foulum | 95.87 (1.06) | 97.99 (1.20) | - | 98.26 (1.11) | - |
 
 The experiments are based on Keras with TensorFlow backend using **10 samples per class**, conducted on a machine equipped with Intel i5-8500, GTX1060 5G and 32G RAM. The OA is of raw classification averaged from 10 Monte Carlo runs.
+
+### Pytorch
+Network | WCRN | DBMA | ResNet99 | ResNet99_avg | DCCNN
+:-: | :-: | :-: | :-: | :-: | :-:
+train time (s) |  |  |  |  | | 
+test time (s) | |  |  |  |  |
+OA (%) | 79.88 |  |  |  |  |
+
+The experiments are based on **Pytorch** backend using **10 samples per class with augmentation**, conducted on a machine equipped with Intel i7-8700 and 32G RAM (no cuda). The OA is of raw classification averaged from 10 Monte Carlo runs.
+
+
 
 ## To do
 - Add PyTorch implementation of DBMA and ResNet99_avg
