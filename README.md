@@ -63,6 +63,15 @@ OA (%) | 83.00 | 86.86 | 72.34 | 86.68 | 77.54 |
 
 The experiments are based on Keras with TensorFlow backend using **10 samples per class with augmentation**, conducted on a machine equipped with Intel i5-8400, GTX1050Ti 4G and 8G RAM. The OA is of raw classification averaged from 10 Monte Carlo runs.
 
+#### Pytorch
+Network | WCRN | DBMA | ResNet99 | ResNet99_avg | DCCNN
+:-: | :-: | :-: | :-: | :-: | :-:
+train time (s) |  |  |  |  | | 
+test time (s) | |  |  |  |  |
+OA (%) | 79.88 |  |  |  |  |
+
+The experiments are based on **Pytorch** backend using **10 samples per class with augmentation**, conducted on a machine equipped with Intel i7-8700 and 32G RAM (no cuda). The OA is of raw classification averaged from 10 Monte Carlo runs.
+
 
 Network | WCRN | DBMA | ResNet99 | ResNet99_avg | DCCNN
 :-: | :-: | :-: | :-: | :-: | :-:
