@@ -98,9 +98,9 @@ The experiments are based on Keras with TensorFlow backend using **10 samples pe
 ### Pytorch
 Network | WCRN | WCRM-group | WCRN-normal | WCRN-group-normal | a
 :-: | :-: | :-: | :-: | :-: | :-:
-train time (s) |  |  |  |  | | 
-test time (s) | |  |  |  |  |
-OA (%) | 79.88 |  |  |  |  |
+train time (s) | 17 | 49 |  |  | | 
+test time (s) | | 12 | 20 |  |  |
+OA (%) | 79.88 | 82.16 |  |  |  |
 
 The experiments are based on **Pytorch** backend using **10 samples per class with augmentation**, conducted on a machine equipped with Intel i7-8700 and 32G RAM (no cuda). The OA is of raw classification averaged from 10 Monte Carlo runs.
 
