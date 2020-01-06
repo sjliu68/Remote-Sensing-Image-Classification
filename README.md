@@ -96,11 +96,11 @@ Foulum | 95.87 (1.06) | 97.99 (1.20) | - | 98.26 (1.11) | - |
 The experiments are based on Keras with TensorFlow backend using **10 samples per class**, conducted on a machine equipped with Intel i5-8500, GTX1060 5G and 32G RAM. The OA is of raw classification averaged from 10 Monte Carlo runs.
 
 ### Pytorch
-Network | WCRN | WCRM-group | WCRN-normal | WCRN-bn-normal | wcrn-bn-default
-:-: | :-: | :-: | :-: | :-: | :-:
-train time (s) | 17 | 49 | 17 |  | | 
-test time (s) | | 13 | 20 | 13 |  |
-OA (%) | 79.88 | 82.16 | 78.83 | 80.36 |  |
+Network | WCRN | WCRM-group | WCRN-normal | WCRN-bn-normal | wcrn-bn-default | resnet99-torch
+:-: | :-: | :-: | :-: | :-: | :-: | :-:
+train time (s) | 17 | 49 | 17 |  | | |
+test time (s) | | 13 | 20 | 13 |  | |
+OA (%) | 79.88 | 82.16 | 78.83 | 80.36 |  | 85.25 |
 
 The experiments are based on **Pytorch** backend using **10 samples per class with augmentation**, conducted on a machine equipped with Intel i7-8700 and 32G RAM (no cuda). The OA is of raw classification averaged from 10 Monte Carlo runs.
 
