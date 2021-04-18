@@ -2,7 +2,7 @@
 """
 Created on Mon Jan  6 10:07:13 2020
 
-@author: light_pollusion_team
+@author: sjliu.me@gmail.com
 """
 
 import torch
