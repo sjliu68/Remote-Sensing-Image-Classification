@@ -150,7 +150,7 @@ if True:
         
         # save as geocode-tif
         name = 'predict_'+str(time4)[-5:]
-        outdata = gdal.GetDriverByName('GTiff').Create(name+'.tif', im1y, im1x, 1, gdal.GDT_UInt16)
+        outdata = gdal.GetDriverByName('GTiff').Create(name+'.tif', im1y, im1x, 1, gdal.GDT_UInt16, [ 'COMPRESS=LZW' ])
         outdata.SetGeoTransform(newgeo)
         outdata.SetProjection(projection)
         outdata.GetRasterBand(1).WriteArray(pre1+1)
