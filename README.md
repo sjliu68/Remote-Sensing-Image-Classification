@@ -123,3 +123,5 @@ Sensing Image Classification. In IGARSS 2018, pp. 7145-7148.](https://doi.org/10
   [4] [Liu, S., and Shi, Q., 2019. Multitask Deep Learning with Spectral Knowledge for Hyperspectral Image Classification. arXiv preprint arXiv:1905.04535.](https://arxiv.org/abs/1905.04535)
  
   [5] [Lee H. Lee and H. Kwon, "Going Deeper With Contextual CNN for Hyperspectral Image Classification," in IEEE Transactions on Image Processing, vol. 26, no. 10, pp. 4843-4855, Oct. 2017.](https://doi.org/10.1109/TIP.2017.2725580)
+
+  [6] [Liu, S., Shi, Q. and Zhang, L., 2020. Few-shot hyperspectral image classification with unknown classes using multitask deep learning. IEEE Transactions on Geoscience and Remote Sensing, 59(6), pp.5085-5102.](https://ieeexplore.ieee.org/abstract/document/9186822)
